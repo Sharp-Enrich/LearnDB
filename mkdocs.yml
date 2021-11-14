@@ -1,0 +1,67 @@
+site_name: 学习数据库
+repo_url: https://github.com/Sharp-Enrich/LearnDB
+edit_uri: edit/master/docs/
+site_description:  学习数据库.
+site_author: Tacey Wong
+copyright: ©2021 Tacey Wong
+docs_dir: docs
+nav:
+  - 前言: index.md
+  - 比较分析: vs.md
+  - SQLite: sqlite/index.md
+  - MySQL: mysql/index.md
+  - PostgreSQL: pg/index.md 
+  - Redis: redis/index.md
+  - MongoDB: mongo/index.md
+  - HBase: hbase/index.md
+  - Cassandra: cassandra/index.md
+  - Neo4J: neo4j/index.md
+  - 搜索引擎: se/sphinx-solr-elasticsearch-lucene.md
+  
+theme:
+  name: material
+  language: zh
+  logo: logo.png
+  favicon: logo.png
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+  palette:
+    
+    - scheme: default
+      primary: black
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate 
+      primary: black
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+markdown_extensions:
+  - footnotes
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      encoding: utf-8
+  - pymdownx.highlight:
+      use_pygments: true
+      auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+extra:
+  generator: false
+# https://github.com/zhaoterryy/mkdocs-pdf-export-plugin
+# pip install mkdocs-pdf-export-plugin
+# plugins:
+#     - pdf-export:
+#         combined: true         
